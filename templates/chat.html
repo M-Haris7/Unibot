@@ -22,6 +22,7 @@
 							<div class="d-flex bd-highlight">
 								<div class="img_cont">
 									<img src="/static/images/Uniworld.png" class="rounded-circle user_img">
+									<!-- <img src="https://www.prdistribution.com/spirit/uploads/pressreleases/2019/newsreleases/d83341deb75c4c4f6b113f27b1e42cd8-chatbot-florence-already-helps-thousands-of-patients-to-remember-their-medication.png" class="rounded-circle user_img"> -->
 									<span class="online_icon"></span>
 								</div>
 								<div class="user_info">
@@ -56,7 +57,7 @@
 					const str_time = hour+":"+minute;
 					var rawText = $("#text").val();
 
-					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="https://i.ibb.co/d5b84Xw/Untitled-design.png" class="rounded-circle user_img_msg"></div></div>';
+					var userHtml = '<div class="d-flex justify-content-end mb-4"><div class="msg_cotainer_send">' + rawText + '<span class="msg_time_send">'+ str_time + '</span></div><div class="img_cont_msg"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJcAAACUCAMAAACp1UvlAAAAY1BMVEX///8BAAIAAAIAAADExMTx8fH5+fkyMjLa2tro6OgqKirl5eXW1tZUVFQhISE6OjqysrKZmZm+vr6QkJCBgYHKysq4uLirq6tsbGykpKQYGBmKiopNTU1HR0dgYGBxcXF5eXkHp9unAAADsElEQVR4nO2b7ZKyMAyFgfINiigIgij3f5Xb1vV1cXGhaVNm3snxx85+zM6Zh7RNk+A4+gpi/1Ltos7tol118ePAwP/UV9zvOiblPb50uz7e2lRw2EsvrvfvI7/fHzaFdrkKTO67BLjrZTNXfjEl5U2pFf42tkrh6rP4b8sNXCXpR1YvZmli21ac/gnriSzN7dqqRbiv+DBmNcjybhnWN7LOIrFsJa0HscyWrWBYS0sSG2xtse3iSpyuytaOreOKlThdlUcbtpJChZYkVtjYxno1WpJYj28rUFiLrzWJH/ondVwc2AnbFj9/PGVeHouwN7Gz4mL85sXOyL74lgrgxTdXXFshhJYkFqL6OjMPxMtDfpAVmFeFaSu8gXndMB9kopRJTHgNmGeR2L2AvFLMu24N2r0kL1Yj+vIZmBdqou9DcXFgyL6AvLB9weML01etEV+YcZ/vwbz2mPdIvq9CeaHuq/wcgvJCPYecEcxrxLTlHMC8cPOcAMwL+UZUwICxAtcWf5Cg+xA7IPvimQ4EF2qWIzWCeI3Ytpxkpl6/JPSoF7oD6hN3fFtOphxhLLVSyrwoRpjHLLVkror1wqsdW06mVDFkhbWCdK6QtjJmsYB/Xl2Rxq8wTeTPtR1naVmpRb90dNesSsu0hOJiMcgYKyy304SSdqEyzVhrbSVO1BSfO7aij9xs4oor6Nl8h1v8uN9yIiA4FY85hQkpzuq09XBHUt/Yu9rael97VnlZtbshSqNh11blBmvws8IgybIsCXDL4SQSiUQikf43ZXntf1ad28/uM78ffmWDcxpOtT13zRjJseNliT+LRuzaqlRWPWahV9fkhCpsaGGVrqwATG8iKeqYgtPIa5lSVU5W5oQ1vNtkMKqzeoo/zzvS1a1+thQAvDzZXEBpjTZwWE9kLsKzPL0u/DBesjxgfMK8BHfcf4qZLk03P8sjYF6CmNFNtnZN0JLEXIPBn0yLSRq8BDFzNZW7KVqSmLFmUfN2HGrx8ozt/OHqlwBWAtubKfr078mDHi9OzMghnkVmcZnq+5W/Ggi6vDwT277p6JLAOv0IO/9OTXV58QjT7xqBJ4X+BHbTtcWjHoOX9ty76ksmK3lp99nKmTaLPi9Xe0W2GLg4MM13isI9Ei/NsyhACS8RYHqXo2TuYm2Al6eZhcU4uDgwvcGrGo2XXjqtMai9wEtvLNlH46Xri3gRL+JFvIgX8SJexIt4ES/iRbyIF/EiXsSLeBEv4kW8iBfxIl7WeX0BROhDKsua/EcAAAAASUVORK5CYII=" class="rounded-circle user_img_msg"></div></div>';
 					
 					$("#text").val("");
 					$("#messageFormeight").append(userHtml);
@@ -68,7 +69,7 @@
 						type: "POST",
 						url: "/get",
 					}).done(function(data) {
-						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://cdn-icons-png.flaticon.com/512/387/387569.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
+						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="/static/images/Uniworld.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + data + '<span class="msg_time">' + str_time + '</span></div></div>';
 						$("#messageFormeight").append($.parseHTML(botHtml));
 					});
 					event.preventDefault();
